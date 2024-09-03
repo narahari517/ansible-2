@@ -1,0 +1,10 @@
+- name: print variables
+  hosts: web
+  vars:
+    NAME: "Hari"
+    DEPT: "Devops"
+    DURATION: "3 yrs"
+  tasks:
+  - name: print variables
+    ansible.builtin.debug:
+      msg: "{{NAME}} is working in {{DEPT}} for {{DURATION}}"
