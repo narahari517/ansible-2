@@ -1,10 +1,16 @@
 - name: print variables
   hosts: web
-  vars:
+  vars: #play level variables, apllicable for all tasks
     NAME: "Hari"
     DEPT: "Devops"
     DURATION: "3 yrs"
   tasks:
   - name: print variables
     ansible.builtin.debug:
-      msg: "{{NAME}} is working in {{DEPT}} for {{DURATION}}"
+      msg: "{{NAME}} has been working in {{DEPT}} for {{DURATION}}"
+
+  - name: print variables
+    vars:
+      DEPT: "Ansible"
+    ansible.builtin.debug:
+      msg: "{{NAME}} has been working in {{DEPT}} for {{DURATION}}"
