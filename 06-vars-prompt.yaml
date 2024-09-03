@@ -3,10 +3,13 @@
   vars_prompt:
   - name: NAME
     prompt: Please provide name
+    private: false
   - name: DEPT
     prompt: Please provide department
+    private: false
   - name: DURATION
     prompt: Please provide duration
+    private: false
   tasks:
   - name: variables from prompt
     ansible.builtin.debug:
