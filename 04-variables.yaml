@@ -10,7 +10,11 @@
       msg: "{{NAME}} has been working in {{DEPT}} for {{DURATION}}"
 
   - name: print variables
-    vars:
+    vars: #task level variables, override play level variables
       DEPT: "Ansible"
+    ansible.builtin.debug:
+      msg: "{{NAME}} has been working in {{DEPT}} for {{DURATION}}"
+
+  - name: print variables
     ansible.builtin.debug:
       msg: "{{NAME}} has been working in {{DEPT}} for {{DURATION}}"
