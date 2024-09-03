@@ -1,0 +1,6 @@
+- name: variables from inventory
+  hosts: web
+  tasks:
+  - name: variables from inventory
+    ansible.builtin.debug:
+      msg: "{{NAME}} has been working in {{DEPT}} for {{DURATION}}"
