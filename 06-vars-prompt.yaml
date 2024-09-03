@@ -1,0 +1,13 @@
+- name: variables from prompt
+  hosts: web
+  vars_prompt:
+  - name: NAME
+    prompt: Please provide name
+  - name: DEPT
+    prompt: Please provide department
+  - name: DURATION
+    prompt: Please provide duration
+  tasks:
+  - name: variables from prompt
+    ansible.builtin.debug:
+      msg: "{{NAME}} has been working in {{DEPT}} for {{DURATION}}"
