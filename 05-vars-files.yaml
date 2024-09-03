@@ -1,0 +1,8 @@
+- name: print variables from files
+  hosts: web
+  vars_files:
+  - vars.yaml
+  tasks:
+  - name: print variables from files
+    ansible.builtin.debug:
+      msg: "{{NAME}} has been working in {{DEPT}} for {{DURATION}}"
