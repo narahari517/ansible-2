@@ -5,4 +5,4 @@
   tasks:
   - name: print variables from files
     ansible.builtin.debug:
-      msg: "{{NAME}} has been working in {{DEPT}} for {{DURATION}}"
+      msg: "ansible-2/04-variables.yaml"
